@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Menu</title>
+    <style>
+      .menu-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px 0;
+      }
+
+      .menu-container a {
+        text-decoration: none;
+        color: green;
+        margin: 0 5px;
+        transition: color 0.3s;
+        white-space: nowrap;
+      }
+
+      .menu-container a:hover {
+        color: red;
+      }
+
+      .menu-container .divider {
+        color: red;
+      }
+
+      .flexbox-menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+      }
+
+      .grid-menu {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: start;
+        white-space: nowrap;
+      }
+
+      .inline-block-menu {
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      .inline-block-menu a,
+      .inline-block-menu .divider {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Первый способ: Flexbox -->
+    <div class="menu-container flexbox-menu">
+      <a href="#1">первая ссылка</a>
+      <span class="divider">|</span>
+      <a href="#2">вторая ссылка</a>
+      <span class="divider">|</span>
+      <a href="#3">третья ссылка</a>
+      <span class="divider">|</span>
+      <a href="#4">четвёртая ссылка</a>
+      <span class="divider">|</span>
+      <a href="#5">пятая ссылка</a>
+    </div>
+
+    <!-- Второй способ: CSS Grid -->
+    <div class="menu-container grid-menu">
+      <a href="#1">первая ссылка</a>
+      <span class="divider">|</span>
+      <a href="#2">вторая ссылка</a>
+      <span class="divider">|</span>
+      <a href="#3">третья ссылка</a>
+      <span class="divider">|</span>
+      <a href="#4">четвёртая ссылка</a>
+      <span class="divider">|</span>
+      <a href="#5">пятая ссылка</a>
+    </div>
+
+    <!-- Третий способ: Inline-block -->
+    <div class="menu-container inline-block-menu">
+      <a href="#1">первая ссылка</a>
+      <span class="divider">|</span>
+      <a href="#2">вторая ссылка</a>
+      <span class="divider">|</span>
+      <a href="#3">третья ссылка</a>
+      <span class="divider">|</span>
+      <a href="#4">четвёртая ссылка</a>
+      <span class="divider">|</span>
+      <a href="#5">пятая ссылка</a>
+    </div>
+  </body>
+</html>
